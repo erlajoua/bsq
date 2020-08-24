@@ -6,7 +6,7 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:55:30 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 16:11:17 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 16:22:41 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int				get_length(char *str)
 	return (nb_of_lines);
 }
 
-int			get_chars(char *str)
+int				get_chars(char *str)
 {
 	int i;
 
@@ -54,7 +54,7 @@ int			get_chars(char *str)
 	return (i);
 }
 
-char		get_empty_char(char *str)
+char			get_empty_char(char *str)
 {
 	char empty_char;
 	int i;
@@ -62,6 +62,26 @@ char		get_empty_char(char *str)
 	i = get_chars(str);
 	empty_char = str[i];
 	return (empty_char);
+}
+
+char			get_obstacle_char(char *str)
+{
+	char obstacle_char;
+	int i;
+
+	i = get_chars(str) + 1;
+	obstacle_char = str[i];
+	return (obstacle_char);
+}
+
+char			get_filled_char(char *str)
+{
+	char filled_char;
+	int i;
+
+	i = get_chars(str) + 2;
+	filled_char = str[i];
+	return (filled_char);
 }
 
 t_variables		*store_map_variables(char *str)
@@ -73,9 +93,9 @@ t_variables		*store_map_variables(char *str)
 		return (NULL);
 	i = 0;
 	map->lines = get_length(str);
-	map->empty = get_empty_char(str);//Faire la fonction
-	//map.obstacle = //Faire la fonction
-	//map.filled = //Faire la fonction
+	map->empty = get_empty_char(str);
+	map->obstacle = get_obstacle_char(str);
+	map->filled = get_filled_char(str);
 	return (map);
 }
 
