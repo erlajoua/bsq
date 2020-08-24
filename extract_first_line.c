@@ -6,7 +6,7 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:55:30 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 15:46:31 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 16:11:17 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int				ft_s_atoi(char *str)
 	
 	int result = 0;
 	i = 0;
-	while (!(str[i] >= '0' && str[i] <= '9'))
+	while (!(str[i] >= '0' && str[i] <= '9') && str[i])
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
@@ -43,9 +43,28 @@ int				get_length(char *str)
 	return (nb_of_lines);
 }
 
-char		get_empty_char
+int			get_chars(char *str)
+{
+	int i;
 
-t_variables		store_map_variables(char *str)
+	i = 0;
+	//Fonction map invalide
+	while (str[i] >= '0' && str[i] <= '9' && str[i])
+		i++;
+	return (i);
+}
+
+char		get_empty_char(char *str)
+{
+	char empty_char;
+	int i;
+
+	i = get_chars(str);
+	empty_char = str[i];
+	return (empty_char);
+}
+
+t_variables		*store_map_variables(char *str)
 {
 	int				i;
 	t_variables		*map;
@@ -53,10 +72,10 @@ t_variables		store_map_variables(char *str)
 	if (!(map = malloc(sizeof(t_variables) * 1)))
 		return (NULL);
 	i = 0;
-	map.lines = get_length(str);
-	map.empty = //Faire la fonction
-	map.obstacle = //Faire la fonction
-	map.filled = //Faire la fonction
+	map->lines = get_length(str);
+	map->empty = get_empty_char(str);//Faire la fonction
+	//map.obstacle = //Faire la fonction
+	//map.filled = //Faire la fonction
 	return (map);
 }
 

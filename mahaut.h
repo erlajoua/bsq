@@ -18,9 +18,13 @@ typedef	struct	s_variables
 	char		filled;
 }				t_variables;
 
-t_variables		store_map_variables(char *str);
+char			get_empty_char(char *str);
+char			get_obstacle_char(char *str);
+char			get_filled_char(char *str);
+t_variables		*store_map_variables(char *str);
 int				ft_s_atoi(char *str);
 int				get_length(char *str);
+int				get_chars(char *str);
 char			*tom_strjoin(char *str, char c, int size);
 int				**from_map_to_strs(int argc, char **argv);
 char			**ft_putstrs(char **strs, char *str, int i);
