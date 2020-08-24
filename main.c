@@ -6,7 +6,7 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:32:31 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 16:33:17 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 16:56:33 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ int		main(int argc, char **argv)
 			break;
 		line = tom_strjoin(line, c, i++);
 	}
+	//Appeler loop in lines en ayant calcule ses variables au prealable 
 	close(fd);
 	return (0);
 }

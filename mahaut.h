@@ -25,6 +25,8 @@ typedef	struct	s_variables
 	char		filled;
 }				t_variables;
 
+int				**store_lines(int size);
+int				*convert_line(char *line, int size, t_variables *vars);
 char			get_empty_char(char *str);
 char			get_obstacle_char(char *str);
 char			get_filled_char(char *str);
