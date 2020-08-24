@@ -74,7 +74,6 @@ t_read		ft_strs_cpy(char *map)
 	return (res);
 }
 
-//En cours - a reprendre
 int			**from_map_to_strs(int argc, char **argv)
 {
 	t_read res;
