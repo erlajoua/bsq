@@ -6,13 +6,13 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 16:26:24 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 17:48:19 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:24:37 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mahaut.h"
 
-int		**loop_in_lines(int fd, int size, t_variables *vars, int **tab)
+int		**loop_in_lines(int fd, t_variables *vars, int **tab)
 {
 	char	c;
 	int		bytes_read;

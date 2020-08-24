@@ -16,7 +16,8 @@ typedef	struct	s_variables
 	char		filled;
 }				t_variables;
 
-int				**loop_in_lines(int fd, int size, t_variables *vars, int **tab);
+void			map_error(void);
+int				**loop_in_lines(int fd, t_variables *vars, int **tab);
 int				**store_lines(int size);
 int				*convert_line(char *line, int size, t_variables *vars);
 char			get_empty_char(char *str);
@@ -27,10 +28,6 @@ int				ft_s_atoi(char *str);
 int				get_length(char *str);
 int				get_chars(char *str);
 char			*tom_strjoin(char *str, char c, int size);
-int				**from_map_to_strs(int argc, char **argv);
-char			**ft_putstrs(char **strs, char *str, int i);
-char			**ft_strs_alloc(char *map);
-//t_read		ft_strs_cpy(char *map);
 char			*ft_strjoin(int size, char **strs, char *sep);
 char			*ft_strcat(char *s1, char *s2);
 int				ft_strlen(char *str);
@@ -38,7 +35,5 @@ char			**ft_split(char *str, char *charset);
 char			*ft_strdup(char *str, char *charset);
 int				count_words(char *str, char *charset);
 int				part_of_charset(char c, char *charset);
-char			**from_chars_to_01(char **strs, char empty, char filled);
-int				nb_of_strs(char **strs);
 
 #endif
