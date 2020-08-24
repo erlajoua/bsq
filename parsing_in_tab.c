@@ -6,11 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 16:26:24 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:24:37 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:35:28 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mahaut.h"
+#include "ft.h"
 
 int		**loop_in_lines(int fd, t_variables *vars, int **tab)
 {
@@ -38,7 +38,6 @@ int		**loop_in_lines(int fd, t_variables *vars, int **tab)
 		else
 			line = tom_strjoin(line, c, i++);
 	}
-
 	return (tab);
 }
 
@@ -71,5 +70,5 @@ int		*convert_line(char *line, int size, t_variables *vars)
 			return (NULL);
 		++i;
 	}
-	return tab;
+	return (tab);
 }

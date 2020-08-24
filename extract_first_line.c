@@ -6,16 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:55:30 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 17:25:15 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:31:44 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mahaut.h"
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include <stdlib.h>
 
 int				ft_s_atoi(char *str)
 {
