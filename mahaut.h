@@ -8,15 +8,6 @@
 # include <stdlib.h>
 # include <stdio.h>
 
-/*
-typedef	struct	s_read
-{
-	int			check;
-	char		*str;
-	char		**strs;
-}				t_read;
-*/
-
 typedef	struct	s_variables
 {
 	int			lines;
@@ -25,6 +16,7 @@ typedef	struct	s_variables
 	char		filled;
 }				t_variables;
 
+int				**loop_in_lines(int fd, int size, t_variables *vars);
 int				**store_lines(int size);
 int				*convert_line(char *line, int size, t_variables *vars);
 char			get_empty_char(char *str);
