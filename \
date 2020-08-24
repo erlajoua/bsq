@@ -6,7 +6,7 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:32:31 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:20:09 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:19:33 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main(int argc, char **argv)
 	}
 	vars  = store_map_variables(line);
 	tab = store_lines(vars->lines);	
-	loop_in_lines(fd, vars->lines, vars, tab);
+	loop_in_lines(fd, vars->lines, vars, &tab);
 	close(fd);
 	return (0);
 }

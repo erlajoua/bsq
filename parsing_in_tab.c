@@ -6,29 +6,26 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 16:26:24 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 17:38:24 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 17:48:19 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mahaut.h"
 
-int		**loop_in_lines(int fd, int size, t_variables *vars)
+int		**loop_in_lines(int fd, int size, t_variables *vars, int **tab)
 {
-
 	char	c;
 	int		bytes_read;
+	char	*line;
+	int		i;
+	int		line_pos;
 
-	char *line;
 	line = malloc(1);
 	line[0] = 0;
-	int i = 0;
-
-	int **tab = store_lines(size);
-	int line_pos = 0;
-
+	i = 0;
+	line_pos = 0;
 	while ((bytes_read = read(fd, &c, 1)) != 0)
 	{
-
 		if (bytes_read == -1)
 			return (0);
 		if (c == '\n')
