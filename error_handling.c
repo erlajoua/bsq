@@ -6,11 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 17:42:32 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:22:24 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:39:55 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mahaut.h"
+#include "ft.h"
 
 void	map_error(void)
 {

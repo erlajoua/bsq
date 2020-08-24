@@ -6,11 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:32:31 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:24:58 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 18:39:42 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mahaut.h"
+#include "ft.h"
 
 int		main(int argc, char **argv)
 {
@@ -21,7 +21,7 @@ int		main(int argc, char **argv)
 	int				i;
 	t_variables		*vars;
 	int				**tab;
-	//Attention si plusieurs fichiers
+
 	if (argc != 2)
 		return (0);
 	fd = open(argv[1], O_RDONLY);
@@ -35,11 +35,11 @@ int		main(int argc, char **argv)
 		if (bytes_read == -1)
 			return (0);
 		if (c == '\n')
-			break;
+			break ;
 		line = tom_strjoin(line, c, i++);
 	}
-	vars  = store_map_variables(line);
-	tab = store_lines(vars->lines);	
+	vars = store_map_variables(line);
+	tab = store_lines(vars->lines);
 	loop_in_lines(fd, vars, tab);
 	close(fd);
 	return (0);
