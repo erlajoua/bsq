@@ -6,17 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:32:31 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 15:49:42 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/24 16:33:17 by malatini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mahaut.h"
-#include <fcntl.h>
-#include <sys/types.h>
-#include <sys/uio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
 
 int		main(int argc, char **argv)
 {
@@ -41,7 +35,6 @@ int		main(int argc, char **argv)
 			break;
 		line = tom_strjoin(line, c, i++);
 	}
-	//printf("%s\n", line);
 	close(fd);
 	return (0);
 }
