@@ -1,31 +1,29 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: malatini <malatini@student.42.fr>          +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/08/24 12:47:14 by malatini          #+#    #+#              #
-#    Updated: 2020/08/24 18:18:10 by malatini         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+SRC		= srcs/main.c srcs/algo.c srcs/algo2.c srcs/error_handling.c srcs/extract_first_line.c srcs/memory.c srcs/utils.c srcs/variables.c srcs/parsing_in_tab.c
 
-SRCS	= //tous les .c
+OBJS	= ${SRC:.c=.o}
+
 NAME	= BSQ
-CFLAGS	= -Wall -Wextra -Werror
-CC		= gcc
+
+CC		= cc
+
 RM		= rm -f
 
-${NAME}:
-			${CC} ${SRCS} -o ${NAME}
+CFLAGS	= -Wall -Wextra -Werror
+
+.c.o:
+					${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+
+${NAME}:	${OBJS}
+					${CC} ${CFLAGS} -o ${NAME} ${OBJS}
 
 all:		${NAME}
 
 clean:
-			${RM} ${OBJS}
+					${RM} ${OBJS}
 
 fclean:		clean
-			${RM} ${NAME}
+					${RM} ${NAME}
 
-re:			fclean
-			all
+re:			fclean all
+
+.PHONY:		clean fclean re all

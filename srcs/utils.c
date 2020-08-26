@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_handling.c                                   :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
+/*   By: erlajoua <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/24 17:42:32 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:39:55 by malatini         ###   ########.fr       */
+/*   Created: 2020/08/25 11:20:33 by erlajoua          #+#    #+#             */
+/*   Updated: 2020/08/26 20:39:36 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../ft.h"
 
-void	map_error(void)
+int		ft_strlen(char *str)
 {
-	write(1, "map error\n", 10);
+	int i;
+
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

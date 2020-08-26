@@ -6,11 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 14:55:30 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/26 20:52:35 by erlajoua         ###   ########.fr       */
+/*   Updated: 2020/08/26 21:33:51 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../ft.h"
 
 int				ft_s_atoi(char *str)
 {
@@ -45,7 +45,7 @@ t_variables		*store_map_variables(char *str)
 		return (0);
 	if (map->empty == map->obstacle ||
 			map->empty == map->filled || map->filled == map->obstacle)
-		map_error();
+		return (0);
 	free(str);
 	return (map);
 }

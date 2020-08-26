@@ -6,11 +6,11 @@
 /*   By: malatini <malatini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/24 18:40:28 by malatini          #+#    #+#             */
-/*   Updated: 2020/08/24 18:45:35 by malatini         ###   ########.fr       */
+/*   Updated: 2020/08/26 20:46:09 by erlajoua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft.h"
+#include "../ft.h"
 
 int				get_length(char *str)
 {
@@ -27,8 +27,7 @@ int				get_chars(char *str)
 	int i;
 
 	i = 0;
-	//Fonction map invalide
-	while (str[i] >= '0' && str[i] <= '9' && str[i])
+	while (str[i] != '\n' && str[i])
 		i++;
 	return (i);
 }
@@ -38,9 +37,11 @@ char			get_empty_char(char *str)
 	char	empty_char;
 	int		i;
 
-	i = get_chars(str);
+	i = get_chars(str) - 3;
 	empty_char = str[i];
-	return (empty_char);
+	if (empty_char >= 32 && empty_char <= 126)
+		return (empty_char);
+	return (0);
 }
 
 char			get_obstacle_char(char *str)
@@ -48,9 +49,11 @@ char			get_obstacle_char(char *str)
 	char	obstacle_char;
 	int		i;
 
-	i = get_chars(str) + 1;
+	i = get_chars(str) - 2;
 	obstacle_char = str[i];
-	return (obstacle_char);
+	if (obstacle_char >= 32 && obstacle_char <= 126)
+		return (obstacle_char);
+	return (0);
 }
 
 char			get_filled_char(char *str)
@@ -58,7 +61,9 @@ char			get_filled_char(char *str)
 	char	filled_char;
 	int		i;
 
-	i = get_chars(str) + 2;
+	i = get_chars(str) - 1;
 	filled_char = str[i];
-	return (filled_char);
+	if (filled_char >= 32 && filled_char <= 126)
+		return (filled_char);
+	return (0);
 }
