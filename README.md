@@ -20,7 +20,7 @@ If several squares have the maximum size, then only the top left square of the m
 ......o..............o.....
 ..o.......o................
 ```
-- `9` represents the number of linse of the file, the width of each line must be the same on each line
+- `9` represents the number of line of the file, the width of each line must be the same on each line
 - `.` is the character of the empty case that could be filled
 - `o` represents the obstacles we must avoid
 - `x` is the character of the future square replaced on the map
